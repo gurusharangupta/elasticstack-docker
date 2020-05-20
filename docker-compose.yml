@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+    elasticsearch:
+        image: blacktop/elasticsearch:latest
+        ports: 
+            - "9200:9200"
+    logstash:
+        build: .
+     
+    kibana:
+        image: blacktop/kibana:latest
+        ports: 
+            - "5601:5601"
